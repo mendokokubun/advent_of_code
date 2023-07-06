@@ -1,0 +1,15 @@
+/home/max/Documents/Work/advent_of_july/bin/Debug/net7.0/advent_of_july
+/home/max/Documents/Work/advent_of_july/bin/Debug/net7.0/advent_of_july.deps.json
+/home/max/Documents/Work/advent_of_july/bin/Debug/net7.0/advent_of_july.runtimeconfig.json
+/home/max/Documents/Work/advent_of_july/bin/Debug/net7.0/advent_of_july.dll
+/home/max/Documents/Work/advent_of_july/bin/Debug/net7.0/advent_of_july.pdb
+/home/max/Documents/Work/advent_of_july/obj/Debug/net7.0/advent_of_july.csproj.AssemblyReference.cache
+/home/max/Documents/Work/advent_of_july/obj/Debug/net7.0/advent_of_july.GeneratedMSBuildEditorConfig.editorconfig
+/home/max/Documents/Work/advent_of_july/obj/Debug/net7.0/advent_of_july.AssemblyInfoInputs.cache
+/home/max/Documents/Work/advent_of_july/obj/Debug/net7.0/advent_of_july.AssemblyInfo.cs
+/home/max/Documents/Work/advent_of_july/obj/Debug/net7.0/advent_of_july.csproj.CoreCompileInputs.cache
+/home/max/Documents/Work/advent_of_july/obj/Debug/net7.0/advent_of_july.dll
+/home/max/Documents/Work/advent_of_july/obj/Debug/net7.0/refint/advent_of_july.dll
+/home/max/Documents/Work/advent_of_july/obj/Debug/net7.0/advent_of_july.pdb
+/home/max/Documents/Work/advent_of_july/obj/Debug/net7.0/advent_of_july.genruntimeconfig.cache
+/home/max/Documents/Work/advent_of_july/obj/Debug/net7.0/ref/advent_of_july.dll
