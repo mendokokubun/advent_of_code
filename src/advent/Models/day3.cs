@@ -78,6 +78,16 @@ static class StringMethods
         }
         return total;
     }
+    // Method to split in groups of 3
+    public static List<List<string>> SplitInThree(List<string> lines)
+    {
+        List<List<string>> groups = lines
+                        .Select((str, index) => new { Value = str, Index = index })
+                        .GroupBy(x => x.Index / 3)
+                        .Select(g => g.Select(x => x.Value).ToList())
+                        .ToList();
+        return groups;
+    }
 }
 
 class Day3
@@ -99,5 +109,18 @@ class Day3
         int total = StringMethods.CalculatePriorities(commonChars);
 
         Console.WriteLine($"Sum of priorities: {total}");
+    }
+    public static void Part2()
+    {
+        string filePath = "src/advent/Models/input3.txt"; 
+
+        // Read the file
+        List<string> linesFile = FileReader.ReadLinesFile(filePath);
+
+        // Split the file in blocks of three lines
+
+        // Get the common item 
+
+        // Calculate the priorities
     }
 }
