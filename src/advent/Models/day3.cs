@@ -14,6 +14,7 @@ static class FileReader
 
 static class StringMethods
 {
+    // This method is used in Part 1: splitting a string in two parts
     public static List<(string,string)> SplitInTwo(List<string> lines)
     {
         List<(string,string)> to_return = new List<(string,string)>();
@@ -35,7 +36,7 @@ static class StringMethods
         }
         return to_return;
     }
-    // Method to find the common between both strings
+    // Method to find the common character between two strings
     public static List<string> FindCommon(List<(string,string)> lines)
     {
         List<string> commonChars = new List<string>();
@@ -52,7 +53,7 @@ static class StringMethods
         }
         return commonChars;
     }
-    // Method to get the priorities
+    // Method to get the priorities. Used in both parts
     public static int CalculatePriorities(List<string> commons)
     {
         int total = 0;
@@ -120,7 +121,7 @@ class Day3
                     if (line2.Contains(c) && line3.Contains(c))
                     {
                         commonChars.Add(c.ToString());
-                        break;
+                        break; // Again, we break to prevent repeating letters
                     }
                 }
             }
@@ -128,10 +129,5 @@ class Day3
             int total = StringMethods.CalculatePriorities(commonChars);
             Console.WriteLine($"Total: {total}");
         }
-        // Split the file in blocks of three lines
-
-        // Get the common item 
-
-        // Calculate the priorities
     }
 }
