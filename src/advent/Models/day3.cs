@@ -78,16 +78,6 @@ static class StringMethods
         }
         return total;
     }
-    // Method to split in groups of 3
-    public static List<List<string>> SplitInThree(List<string> lines)
-    {
-        List<List<string>> groups = lines
-                        .Select((str, index) => new { Value = str, Index = index })
-                        .GroupBy(x => x.Index / 3)
-                        .Select(g => g.Select(x => x.Value).ToList())
-                        .ToList();
-        return groups;
-    }
 }
 
 class Day3
@@ -113,10 +103,31 @@ class Day3
     public static void Part2()
     {
         string filePath = "src/advent/Models/input3.txt"; 
-
-        // Read the file
-        List<string> linesFile = FileReader.ReadLinesFile(filePath);
-
+        
+        // Read the file, three lines at once and store the commond
+        using  (StreamReader reader = new StreamReader(filePath))
+        {
+            List<string> commonChars = new List<string>();
+            while (!reader.EndOfStream)
+            {
+                string line1 = reader.ReadLine();
+                string line2 = reader.ReadLine();
+                string line3 = reader.ReadLine();
+                
+                // Loop through all chars of line1
+                foreach (char c in line1)
+                {
+                    if (line2.Contains(c) && line3.Contains(c))
+                    {
+                        commonChars.Add(c.ToString());
+                        break;
+                    }
+                }
+            }
+            // calculate priorities
+            int total = StringMethods.CalculatePriorities(commonChars);
+            Console.WriteLine($"Total: {total}");
+        }
         // Split the file in blocks of three lines
 
         // Get the common item 
