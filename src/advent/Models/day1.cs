@@ -83,3 +83,14 @@ static class FileOperations
         }
     }
 }
+
+class Day1
+{
+    public static void runDay1()
+    {
+        string filePath = "src/advent/Models/input1.txt"; // Replace with the actual file path
+        var blockSums = FileOperations.ReadBlockSumsFromFile(filePath);
+        FileOperations.ShowLargestNumber(blockSums);
+        FileOperations.ShowThreeLargestNumbers(blockSums);
+        }
+}

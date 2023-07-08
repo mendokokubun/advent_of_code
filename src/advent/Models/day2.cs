@@ -1,65 +1,5 @@
 using System;
 
-class Dictionaries
-{
-    public Dictionary<string,string> dictWins;
-    public Dictionary<string,string> dictLoss;
-    public Dictionary<string,string> dictDraw;
-
-    public Dictionary<string,int> dictChoice;
-    public Dictionary<string,int> dictResult;
-
-    public Dictionaries()
-    {
-        dictWins = initializeDictWins();
-        dictLoss = initializeDictLoss();
-        dictDraw = initializeDictDraw();
-        dictChoice = initializeDictChoice();
-        dictResult = initializeDictResult();
-    }
-
-
-    private Dictionary<string,string> initializeDictWins()
-    {
-        Dictionary<string, string> dictionary = new Dictionary<string, string>();
-        dictionary["A"] = "Y";
-        dictionary["B"] = "Z";
-        dictionary["C"] = "X";
-        return dictionary;
-    }
-    private Dictionary<string,string> initializeDictLoss()
-    {
-        Dictionary<string, string> dictionary = new Dictionary<string, string>();
-        dictionary["A"] = "Z";
-        dictionary["B"] = "X";
-        dictionary["C"] = "Y";
-        return dictionary;
-    }
-    private Dictionary<string,string> initializeDictDraw()
-    {
-        Dictionary<string, string> dictionary = new Dictionary<string, string>();
-        dictionary["A"] = "X";
-        dictionary["B"] = "Y";
-        dictionary["C"] = "Z";
-        return dictionary;
-    }
-    private Dictionary<string,int> initializeDictChoice()
-    {
-        Dictionary<string, int> dictionary = new Dictionary<string, int>();
-        dictionary["X"] = 1;
-        dictionary["Y"] = 2;
-        dictionary["Z"] = 3;
-        return dictionary;
-    }
-    private Dictionary<string,int> initializeDictResult()
-    {
-        Dictionary<string, int> dictionary = new Dictionary<string, int>();
-        dictionary["L"] = 0;
-        dictionary["D"] = 3;
-        dictionary["W"] = 6;
-        return dictionary;
-    }
-}
 
 static class ReadFile
 {
@@ -94,5 +34,193 @@ static class ReadFile
         }
 
         return linesWithChars;
+    }
+}
+
+class Day2
+{
+    public static void runDay2Part1()
+    {   
+        int score = 0;
+        string FilePath = "src/advent/Models/input2.txt";
+        var listChars = ReadFile.ReadLinesWithChars(FilePath);
+        foreach ((char,char) line in listChars)
+        {
+            // We use the unicode converter
+            int opponent = System.Convert.ToInt32(line.Item1);
+            int mine = System.Convert.ToInt32(line.Item2);
+
+            // Rock
+            if (mine == 88)
+            {
+                score += 1;
+                // Draw
+                if (mine == opponent + 23)
+                {
+                    score += 3;
+                }
+                // Win
+                else if (mine == opponent + 21)
+                {
+                    score += 6;
+                }
+                // Loss
+                else if (mine == opponent + 22)
+                {
+                    score += 0;
+                }
+                else
+                {
+                    Console.WriteLine("WRONG!");
+                }
+
+            }
+            // Paper
+            else if (mine == 89)
+            {
+                score += 2;
+                // Draw
+                if (mine == opponent + 23)
+                {
+                    score += 3;
+                }
+                // Win
+                else if (mine == opponent + 24)
+                {
+                    score += 6;
+                }
+                // Loss
+                else if (mine == opponent + 22)
+                {
+                    score += 0;
+                }
+                else
+                {
+                    Console.WriteLine("WRONG!");
+                }
+            }
+            // Scissor
+            else if (mine == 90)
+            {
+                score += 3;
+                // Draw
+                if (mine == opponent + 23)
+                {
+                    score += 3;
+                }
+                // Win
+                else if (mine == opponent + 24)
+                {
+                    score += 6;
+                }
+                // Loss
+                else if (mine == opponent + 25)
+                {
+                    score += 0;
+                }
+                else
+                {
+                    Console.WriteLine("WRONG!");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Wrong dur");
+            }
+        }
+        Console.WriteLine($"Final score: {score}");
+    }
+    public static void runDay2Part2()
+    {   
+        int score = 0;
+        string FilePath = "src/advent/Models/input2.txt";
+        var listChars = ReadFile.ReadLinesWithChars(FilePath);
+        foreach ((char,char) line in listChars)
+        {
+            // We use the unicode converter
+            int opponent = System.Convert.ToInt32(line.Item1);
+            int mine = System.Convert.ToInt32(line.Item2);
+
+            // Loose
+            if (mine == 88)
+            {
+                score += 0;
+                // Rock
+                if (opponent == 65)
+                {
+                    score += 3;
+                }
+                // Paper
+                else if (opponent == 66)
+                {
+                    score += 1;
+                }
+                // Scissor
+                else if (opponent == 67)
+                {
+                    score += 2;
+                }
+                else
+                {
+                    Console.WriteLine("WRONG!");
+                }
+
+            }
+            // Draw
+            else if (mine == 89)
+            {
+                score += 3;
+                // Rock
+                if (opponent == 65)
+                {
+                    score += 1;
+                }
+                // Paper
+                else if (opponent == 66)
+                {
+                    score += 2;
+                }
+                // Scissor
+                else if (opponent == 67)
+                {
+                    score += 3;
+                }
+                else
+                {
+                    Console.WriteLine("WRONG!");
+                }
+
+            }
+            // Win
+            else if (mine == 90)
+            {
+                score += 6;
+                // Rock
+                if (opponent == 65)
+                {
+                    score += 2;
+                }
+                // Paper
+                else if (opponent == 66)
+                {
+                    score += 3;
+                }
+                // Scissor
+                else if (opponent == 67)
+                {
+                    score += 1;
+                }
+                else
+                {
+                    Console.WriteLine("WRONG!");
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("Wrong dur");
+            }
+        }
+        Console.WriteLine($"Final score part 2: {score}");
     }
 }
