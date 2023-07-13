@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/max/Documents/Work/advent_of_july/advent_of_july.csproj": {}
+    "/home/max/Documents/advent_of_code/c_sharp/advent_of_code/advent_of_july.csproj": {}
   },
   "projects": {
-    "/home/max/Documents/Work/advent_of_july/advent_of_july.csproj": {
+    "/home/max/Documents/advent_of_code/c_sharp/advent_of_code/advent_of_july.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/max/Documents/Work/advent_of_july/advent_of_july.csproj",
+        "projectUniqueName": "/home/max/Documents/advent_of_code/c_sharp/advent_of_code/advent_of_july.csproj",
         "projectName": "advent_of_july",
-        "projectPath": "/home/max/Documents/Work/advent_of_july/advent_of_july.csproj",
+        "projectPath": "/home/max/Documents/advent_of_code/c_sharp/advent_of_code/advent_of_july.csproj",
         "packagesPath": "/home/max/.nuget/packages/",
-        "outputPath": "/home/max/Documents/Work/advent_of_july/obj/",
+        "outputPath": "/home/max/Documents/advent_of_code/c_sharp/advent_of_code/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/max/.nuget/NuGet/NuGet.Config"

@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = advent_of_july
-build_property.ProjectDir = /home/max/Documents/Work/advent_of_july/
+build_property.ProjectDir = /home/max/Documents/advent_of_code/c_sharp/advent_of_code/

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nLcpSCP0SchZmAFWpf1vm3U2fJwSRT9oO52ppmObqAlQAojPF64SGe2ab3kqcSqL/xnz//PekuLMM1XdmRqBRA==",
+  "dgSpecHash": "EbkelLA6akS330KhUWWiTP+Gu1FQPye2Wa3Y7JcWkzbZa/NZk4ipAZ0qg+kQdmsqU6MJS5XjbcCrpwu86+valw==",
   "success": true,
-  "projectFilePath": "/home/max/Documents/Work/advent_of_july/advent_of_july.csproj",
+  "projectFilePath": "/home/max/Documents/advent_of_code/c_sharp/advent_of_code/advent_of_july.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

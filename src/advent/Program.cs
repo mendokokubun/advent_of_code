@@ -11,9 +11,7 @@ class Program
         // Get instructions
         List<string> ListInstructions = Day5.InstructionsReader();
 
-        // Part 1
-        Day5.Part1(ListInstructions, initialData);
-
-        
+        // Part 2
+        Day5.Part2(ListInstructions, initialData);
     }
 }
