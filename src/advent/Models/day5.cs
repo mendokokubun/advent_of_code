@@ -70,4 +70,39 @@ class Day5
         }
         return numbers;
     } 
+    public static void Part1(List<string> ListInstructions, Dictionary<int, List<string>> initialData)
+    {
+    // Get numbers from instructions
+        foreach (string l in ListInstructions)
+        {
+            List<int> NumbersFromInstr = Day5.GetNumbersFromInstruction(l);
+            /* 
+            Perform actions:
+            1) Take last value of a list and then remove it with RemoveAt(list.Count - 1) 
+            2) Append it with list_new.Add(element)
+            3) Update elements of dictionary
+            */
+            int quantity = NumbersFromInstr[0];
+            List<string> to_remove = initialData[NumbersFromInstr[1]];
+            List<string> to_add = initialData[NumbersFromInstr[2]];
+
+            for (int i=0; i<quantity; i++)
+            {
+                // 1)
+                string r = to_remove[to_remove.Count-1];
+                to_remove.RemoveAt(to_remove.Count-1);
+                // 2)
+                to_add.Add(r);
+            }
+            // 3)
+            initialData[NumbersFromInstr[1]] = to_remove;
+            initialData[NumbersFromInstr[2]] = to_add;
+        }
+        // print the top values
+        foreach (KeyValuePair<int, List<string>> kvp in initialData)
+        {
+            string topElement = kvp.Value[kvp.Value.Count-1];
+            Console.WriteLine($"Stack: {kvp.Key}. Top: {topElement}");
+        }
+    }
 }
